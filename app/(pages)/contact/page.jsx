@@ -68,6 +68,10 @@ const Contact = () => {
       title: 'Lahore Branch',
       img: '/images/lahore.jpg',
       fullInfo: false,
+    }, {
+      title: 'Peshawar Branch',
+      img: '/images/peshawar.jpg',
+      fullInfo: false,
     },
   ];
 
