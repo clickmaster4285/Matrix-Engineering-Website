@@ -45,7 +45,7 @@ const Stats = () => {
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              className="text-center p-6 rounded-xl shadow-md bg-white/5 backdrop-blur-sm border border-border"
+              className="text-center p-8 rounded-xl shadow-professional bg-card/80 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-300"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{
@@ -55,17 +55,18 @@ const Stats = () => {
               }}
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 0 25px rgba(255, 215, 0, 0.4)",
+                boxShadow: "0 10px 40px -10px rgba(59, 130, 246, 0.3)",
               }}
             >
               <motion.div
                 className="flex justify-center mb-4"
                 whileHover={{
-                  textShadow: "0 0 15px rgba(255, 215, 0, 0.8)",
                   scale: 1.2,
                 }}
               >
-                <stat.icon className="w-16 h-16 text-primary" />
+                <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
+                  <stat.icon className="w-12 h-12 text-primary drop-shadow-lg" />
+                </div>
               </motion.div>
               <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
                 {stat.value}

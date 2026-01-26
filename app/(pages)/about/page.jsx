@@ -1,16 +1,44 @@
 import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 export default function AboutPage() {
   const services = [
-    'Telecom Equipment Installation & Commissioning',
-    'In-Building Solutions (IBS)',
-    'Telecom Civil Infrastructure Buildout',
-    'Roads & Building Construction',
-    'RF Planning & Optimization',
-    'Logistics & Warehousing',
-    'Telecom Cabinets Manufacturing',
-    'Tower Fabrication & Galvanizing',
-    'Diesel Generator Rental Services',
+    {
+      title: 'Telecom Equipment Installation & Commissioning',
+      href: '/services/telecom-equipment',
+    },
+    {
+      title: 'In-Building Solutions (IBS)',
+      href: '/services/in-building-solution',
+    },
+    {
+      title: 'Telecom Civil Infrastructure Buildout',
+      href: '/services/civil-infrastructure',
+    },
+    {
+      title: 'Roads & Building Construction',
+      href: '/services/construction',
+    },
+    {
+      title: 'RF Planning & Optimization',
+      href: '/services/rf-planning',
+    },
+    {
+      title: 'Logistics & Warehousing',
+      href: '/services/logistics',
+    },
+    {
+      title: 'Telecom Cabinets Manufacturing',
+      href: '/products/cabinets',
+    },
+    {
+      title: 'Tower Fabrication & Galvanizing',
+      href: '/products/galvanized-towers',
+    },
+    {
+      title: 'Diesel Generator Rental Services',
+      href: '/products/generators',
+    },
   ];
 
   const values = [
@@ -107,15 +135,19 @@ export default function AboutPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-3">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="flex items-center gap-3 p-4 rounded-lg hover:bg-muted transition-colors"
+                href={service.href}
+                className="flex items-center gap-3 p-4 rounded-lg hover:bg-muted transition-colors group"
               >
-                <ChevronRight className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground">{service}</span>
-              </div>
+                <ChevronRight className="w-5 h-5 text-primary shrink-0 group-hover:translate-x-1 transition-transform" />
+                <span className="text-muted-foreground group-hover:text-foreground">
+                  {service.title}
+                </span>
+              </Link>
             ))}
           </div>
+
         </div>
       </section>
 

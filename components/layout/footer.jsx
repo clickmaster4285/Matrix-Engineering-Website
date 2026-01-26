@@ -19,19 +19,20 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-chart-1 text-background py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-gradient-to-br from-chart-1 via-chart-1/95 to-chart-1 text-background py-16 border-t border-border/50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
           {/* Services */}
           <div>
-            <h3 className="text-xl font-bold text-primary mb-6">
+            <h3 className="text-xl font-bold text-primary mb-6 pb-2 border-b border-primary/20">
               Our Services
             </h3>
             <ul className="space-y-3">
               {services.map((service, index) => (
-                <li key={index}>
-                  <span className=" hover:text-primary transition-colors text-sm">
-                    • {service}
+                <li key={index} className="group">
+                  <span className="text-background/80 group-hover:text-primary transition-colors duration-200 text-sm leading-relaxed flex items-start gap-2">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>{service}</span>
                   </span>
                 </li>
               ))}
@@ -40,14 +41,15 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="text-xl font-bold text-primary mb-6">
+            <h3 className="text-xl font-bold text-primary mb-6 pb-2 border-b border-primary/20">
               Our Products
             </h3>
             <ul className="space-y-3">
               {products.map((product, index) => (
-                <li key={index}>
-                  <span className=" hover:text-primary transition-colors text-sm">
-                    • {product}
+                <li key={index} className="group">
+                  <span className="text-background/80 group-hover:text-primary transition-colors duration-200 text-sm leading-relaxed flex items-start gap-2">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>{product}</span>
                   </span>
                 </li>
               ))}
@@ -56,47 +58,49 @@ export function Footer() {
 
           {/* Contact & Logo */}
           <div>
-            <div className="flex items-center mb-6">
+            <div className="flex items-center mb-8 pb-4 border-b border-primary/20">
               <Image
                 src="/logo.png"
                 alt="Industrial steel manufacturing"
                 width={64}
                 height={64}
-                className="w-16 h-auto object-cover drop-shadow-sm"
+                className="w-16 h-16 object-cover drop-shadow-lg rounded-lg bg-background/10 p-1"
                 priority
               />
-              <div>
-                <span className="text-2xl font-bold text-primary">
+              <div className="ml-3">
+                <span className="text-xl font-bold text-primary block leading-tight">
                   MATRIX ENGINEERING SERVICES
                 </span>
-                <div className="text-xs  -mt-1">PRIVATE LIMITED</div>
+                <div className="text-xs text-background/70 -mt-0.5">PRIVATE LIMITED</div>
               </div>
             </div>
 
-            <div className="space-y-2">
-              <h3 className="text-xl font-bold mb-4">Contact us</h3>
-              <p className="text-sm">
-                Tel:{' '}
-                <a href="tel:+923325220658" className="hover:text-primary">
-                  +923325220658
-                </a>
-              </p>
-              <p className="text-sm">
-  Email:{' '}
-  <a href="mailto:info@matrixes.pk" className="hover:text-primary">
-    info@matrixes.pk
-  </a>
-</p>
-
-              <p className="text-sm">
-                Address: 5th floor, Plaza 7, Capital Enclave, Islamabad
-              </p>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-primary mb-4 pb-2 border-b border-primary/20">Contact us</h3>
+              <div className="space-y-3">
+                <p className="text-sm text-background/90 leading-relaxed">
+                  <span className="font-semibold text-primary">Tel:</span>{' '}
+                  <a href="tel:+923325220658" className="hover:text-primary transition-colors duration-200 underline-offset-2 hover:underline">
+                    +923325220658
+                  </a>
+                </p>
+                <p className="text-sm text-background/90 leading-relaxed">
+                  <span className="font-semibold text-primary">Email:</span>{' '}
+                  <a href="mailto:info@matrixes.pk" className="hover:text-primary transition-colors duration-200 underline-offset-2 hover:underline break-all">
+                    info@matrixes.pk
+                  </a>
+                </p>
+                <p className="text-sm text-background/90 leading-relaxed">
+                  <span className="font-semibold text-primary">Address:</span>{' '}
+                  <span>5th floor, Plaza 7, Capital Enclave, Islamabad</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-chart-2 mt-8 pt-8 text-center text-sm text-chart-2">
-          <p>
+        <div className="border-t border-primary/20 mt-12 pt-8 text-center">
+          <p className="text-sm text-background/70">
             &copy; {new Date().getFullYear()} MATRIX ENGINEERING Private
             Limited. All rights reserved.
           </p>

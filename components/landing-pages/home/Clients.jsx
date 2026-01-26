@@ -42,16 +42,16 @@ const Clients = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-linear-to-b from-secondary/30 via-secondary/20 to-secondary/10">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-secondary/30 via-secondary/20 to-secondary/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Section Header - Updated to match the new style */}
         <div className="text-center mb-8 md:mb-16 lg:mb-20">
           <div className="inline-flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 md:w-12 h-0.5 bg-linear-to-r from-transparent to-primary" />
+            <div className="w-8 md:w-12 h-0.5 bg-gradient-to-r from-transparent to-primary" />
             <span className="text-sm font-semibold text-primary tracking-widest uppercase">
               Our Partners
             </span>
-            <div className="w-8 md:w-12 h-0.5 bg-linear-to-l from-transparent to-primary" />
+            <div className="w-8 md:w-12 h-0.5 bg-gradient-to-l from-transparent to-primary" />
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">
             Our <span className="text-primary">Clients</span>
@@ -87,11 +87,11 @@ const Clients = () => {
         >
           {clients.map((client, index) => (
             <SwiperSlide key={`top-${index}`}>
-              <div className="flex items-center justify-center p-4">
+              <div className="flex items-center justify-center p-6 bg-card/50 backdrop-blur-sm rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-professional transition-all duration-300 group">
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="w-50 h-50 object-contain rounded-lg hover:scale-105 transition-transform duration-300"
+                  className="w-32 h-20 object-contain grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
                 />
               </div>
             </SwiperSlide>
@@ -124,11 +124,11 @@ const Clients = () => {
         >
           {clients.map((client, index) => (
             <SwiperSlide key={`bottom-${index}`}>
-              <div className="flex items-center justify-center p-4">
+              <div className="flex items-center justify-center p-6 bg-card/50 backdrop-blur-sm rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-professional transition-all duration-300 group">
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="w-50 h-50 object-contain rounded-lg hover:scale-105 transition-transform duration-300"
+                  className="w-32 h-20 object-contain grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
                 />
               </div>
             </SwiperSlide>

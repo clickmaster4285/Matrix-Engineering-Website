@@ -7,7 +7,7 @@ const ProductCard = ({ icon: Icon, title, description, imageSrc, url, priority }
   return (
     <a href={url} className="group block">
       {/* ✅ Give the card its own height using aspect */}
-      <div className="relative overflow-hidden clip-angled card-hover transition-all duration-500 hover:-translate-y-2 aspect-3/3">
+      <div className="relative overflow-hidden rounded-xl card-hover transition-all duration-500 hover:-translate-y-2 aspect-3/3 shadow-professional border border-border/50 group">
         {/* Background Image */}
         <Image
           src={imageSrc}
@@ -20,14 +20,14 @@ const ProductCard = ({ icon: Icon, title, description, imageSrc, url, priority }
         />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-accent-foreground/50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-accent-foreground/60 via-accent-foreground/50 to-accent-foreground/40 group-hover:from-accent-foreground/50 group-hover:via-accent-foreground/40 group-hover:to-accent-foreground/30 transition-all duration-500" />
 
         {/* Content */}
         <div className="relative z-10 p-6 pt-16 pb-8 h-full flex flex-col">
           {/* Icon */}
           <div className="mb-auto">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-primary/10  backdrop-blur-sm">
-              <Icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/20 backdrop-blur-md border border-primary/30 shadow-lg group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300">
+              <Icon className="w-8 h-8 text-primary drop-shadow-lg" strokeWidth={1.5} />
             </div>
           </div>
 
@@ -63,8 +63,8 @@ const ProductCard = ({ icon: Icon, title, description, imageSrc, url, priority }
         </div>
 
         {/* Corner Accent */}
-        <div className="absolute top-0 left-0 w-16 h-16 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full bg-primary/20 transform -rotate-45 translate-x-[-50%] translate-y-[-50%]" />
+        <div className="absolute top-0 right-0 w-24 h-24 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div className="absolute top-0 right-0 w-full h-full bg-primary/20 transform rotate-45 translate-x-[50%] translate-y-[-50%] rounded-full blur-xl" />
         </div>
       </div>
     </a>
@@ -128,15 +128,15 @@ const Products = () => {
     <div className="min-h-screen bg-card mt-10 md:mt-10">
       {/* Hero Section */}
       <section className="relative  overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-b from-secondary/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
           <div className="text-center mb-16 md:mb-20">
             <div className="inline-flex items-center justify-center gap-3 mb-6">
-              <div className="w-12 h-0.5 bg-linear-to-r from-transparent to-primary" />
+              <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-primary" />
               <span className="text-sm font-semibold text-primary tracking-widest uppercase">
                Our Products
               </span>
-              <div className="w-12 h-0.5 bg-linear-to-l from-transparent to-primary" />
+              <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-primary" />
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-6">

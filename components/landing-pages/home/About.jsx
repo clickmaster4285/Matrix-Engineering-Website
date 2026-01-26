@@ -43,7 +43,7 @@ export default function About() {
   ];
 
   return (
-    <section className="pb-20 pt-15 md:pb-28 pt-15 bg-linear-to-b from-background via-background/98 to-background">
+    <section className="pb-20 pt-15 md:pb-28 pt-15 bg-gradient-to-b from-background via-background/98 to-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
@@ -67,7 +67,7 @@ export default function About() {
           {/* Vision Card */}
           <div className="group relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 via-primary/15 to-transparent rounded-3xl blur-lg opacity-0 group-hover:opacity-50 transition-all duration-700"></div>
-            <Card className="relative p-6 sm:p-8 md:p-10 bg-card/50 backdrop-blur-sm border border-border/30 hover: transition-all duration-500 hover:shadow-xl h-full">
+            <Card className="relative p-6 sm:p-8 md:p-10 bg-card/80 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-professional-lg h-full">
               <div className="flex flex-col items-center text-center h-full">
                 <div className="relative mb-5 md:mb-6">
                   <div className="absolute -inset-4 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
@@ -93,7 +93,7 @@ export default function About() {
           {/* Mission Card */}
           <div className="group relative">
             <div className="absolute -inset-1 bg-gradient-to-l from-primary/30 via-primary/15 to-transparent rounded-3xl blur-lg opacity-0 group-hover:opacity-50 transition-all duration-700"></div>
-            <Card className="relative p-6 sm:p-8 md:p-10 bg-card/50 backdrop-blur-sm border border-border/30 hover: transition-all duration-500 hover:shadow-xl h-full">
+            <Card className="relative p-6 sm:p-8 md:p-10 bg-card/80 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-professional-lg h-full">
               <div className="flex flex-col items-center text-center h-full">
                 <div className="relative mb-5 md:mb-6">
                   <div className="absolute -inset-4 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
@@ -134,7 +134,7 @@ export default function About() {
           {values.map((value, index) => (
             <div key={index} className="group">
               <div className="absolute -inset-0.5 bg-gradient-to-br from-primary/20 to-transparent rounded-2xl blur opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
-              <Card className="relative p-5 sm:p-6 md:p-7 bg-card/60 backdrop-blur-sm border border-border/30 hover:hover:shadow-lg transition-all duration-500 hover:-translate-y-1 h-full">
+              <Card className="relative p-5 sm:p-6 md:p-7 bg-card/80 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:shadow-professional transition-all duration-500 hover:-translate-y-1 h-full">
                 <div className="flex flex-col items-center text-center h-full">
                   <div className="relative mb-4 md:mb-5">
                     <div className="absolute -inset-3 bg-primary/15 rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>

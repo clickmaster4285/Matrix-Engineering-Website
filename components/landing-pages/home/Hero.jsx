@@ -138,7 +138,7 @@ const Hero = () => {
                 className="object-cover object-center"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
               />
-              <div className="absolute inset-0 bg-linear-to-r from-[#13161acc] via-[#151d2966] to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#13161acc] via-[#151d2999] to-[#151d2966]" />
             </div>
           </SwiperSlide>
         ))}
@@ -209,11 +209,17 @@ const Hero = () => {
       <div className="absolute inset-0 z-10 pointer-events-none">
         <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-start pointer-events-auto">
           <div className="max-w-lg md:max-w-xl lg:max-w-2xl text-left">
-            <h1 className="text-xl  sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight">
+            <div className="inline-block mb-4 px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
+              <span className="text-sm font-semibold text-primary tracking-wider uppercase">Trusted Telecom Solutions</span>
+            </div>
+            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
               Your One Stop Shop to Plan, Build, Design and Manage your{' '}
-              <span className="text-primary">Telecom Infrastructure</span> with our end to end
+              <span className="text-primary drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">Telecom Infrastructure</span> with our end to end
               solutions
             </h1>
+            <p className="text-base sm:text-lg text-white/90 max-w-xl leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
+              Delivering excellence in telecom infrastructure with 20+ years of industry expertise
+            </p>
           </div>
         </div>
 
@@ -223,9 +229,9 @@ const Hero = () => {
             {/* Desktop */}
             <div className="hidden md:flex justify-center items-center gap-6 lg:gap-8 xl:gap-12">
               {stats.map((stat, i) => (
-                <div
+                  <div
                   key={i}
-                  className="relative flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-500 hover:scale-[1.03]"
+                  className="relative flex items-center gap-4 px-5 py-4 rounded-xl transition-all duration-500 hover:scale-[1.05] bg-white/5 backdrop-blur-md border border-white/10 hover:border-primary/30 hover:bg-white/10"
                 >
                   <div className="absolute inset-0 rounded-xl bg-primary/10 blur-xl opacity-60 hover:opacity-100 transition" />
                   <stat.icon className="relative z-10 w-7 h-7 xl:w-8 xl:h-8 text-primary drop-shadow-[0_0_12px_rgba(59,130,246,0.9)]" />
@@ -233,7 +239,7 @@ const Hero = () => {
                     <div className="text-2xl xl:text-4xl font-bold leading-none drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
                       <Counter value={stat.value} triggerKey={statsRunKey} duration={2200} />
                     </div>
-                    <div className="text-sm lg:text-base mt-1 text-white/80 drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]">
+                    <div className="text-sm lg:text-base mt-1 text-white/90 drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]">
                       {stat.label}
                     </div>
                   </div>

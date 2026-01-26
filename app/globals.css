@@ -128,12 +128,49 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   /* Global H1 style */
   h1 {
     @apply text-4xl font-bold bg-gradient-to-r from-slate-800 to-primary bg-clip-text text-transparent;
+    letter-spacing: -0.02em;
+  }
+
+  h2, h3, h4 {
+    letter-spacing: -0.01em;
+  }
+
+  /* Professional card hover effects */
+  .card-hover {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .card-hover:hover {
+    @apply shadow-2xl;
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  /* Clip angled effect for cards */
+  .clip-angled {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-radius: 0.75rem;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+
+  /* Professional shadows */
+  .shadow-professional {
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  }
+
+  .shadow-professional-lg {
+    box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
   }
 
   /* Sonner toast styles */

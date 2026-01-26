@@ -116,14 +116,14 @@ export function Navbar() {
       variants={navbarVariants}
       className={`
         fixed top-0 left-0 right-0 z-50
-        transition-all duration-300
+        transition-all duration-500 ease-out
         ${isScrolled
-          ? 'bg-background/80 backdrop-blur-md border-b border-border shadow-lg'
+          ? 'bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-professional-lg'
           : 'bg-transparent border-transparent shadow-none'}
       `}
     >
       <div className="max-w-8xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* LOGO */}
           <motion.div>
             <Link href="/" className="flex items-center">
@@ -132,7 +132,7 @@ export function Navbar() {
                 alt="logo"
                 width={50}
                 height={50}
-                className="w-14 h-14 sm:w-23 sm:h-23"
+                className="w-14 h-14 sm:w-20 sm:h-20 transition-transform duration-300 hover:scale-105"
                 priority
               />
               <div className="ml-2 leading-tight">
@@ -181,10 +181,10 @@ export function Navbar() {
                 </Button>
               </DropdownMenuTrigger>
 
-              <DropdownMenuContent className="w-64">
+              <DropdownMenuContent className="w-72 shadow-professional-lg border-border/50 backdrop-blur-sm bg-card/95">
                 {servicesItems.map((item) => (
                   <DropdownMenuItem key={item.path} asChild>
-                    <Link href={item.path} onClick={() => setServicesOpen(false)}>
+                    <Link href={item.path} onClick={() => setServicesOpen(false)} className="transition-colors duration-200 hover:bg-primary/10">
                       {item.label}
                     </Link>
                   </DropdownMenuItem>
@@ -204,10 +204,10 @@ export function Navbar() {
                 </Button>
               </DropdownMenuTrigger>
 
-              <DropdownMenuContent className="w-64">
+              <DropdownMenuContent className="w-72 shadow-professional-lg border-border/50 backdrop-blur-sm bg-card/95">
                 {productsItems.map((item) => (
                   <DropdownMenuItem key={item.path} asChild>
-                    <Link href={item.path} onClick={() => setProductsOpen(false)}>
+                    <Link href={item.path} onClick={() => setProductsOpen(false)} className="transition-colors duration-200 hover:bg-primary/10">
                       {item.label}
                     </Link>
                   </DropdownMenuItem>
@@ -241,7 +241,7 @@ export function Navbar() {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
-              className="lg:hidden bg-background border-t border-border py-2 space-y-1 z-50 max-h-[80vh] overflow-y-auto"
+              className="lg:hidden bg-background/98 backdrop-blur-xl border-t border-border/50 py-2 space-y-1 z-50 max-h-[80vh] overflow-y-auto shadow-professional-lg"
               variants={mobileMenuVariants}
               initial="closed"
               animate="open"

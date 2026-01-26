@@ -22,7 +22,7 @@ import {
 const ServiceCard = ({ icon: Icon, title, des, imageSrc, url, priority }) => {
   return (
     <Link href={url} className="group block">
-      <div className="relative overflow-hidden clip-angled transition-all duration-500 hover:-translate-y-2 aspect-3/3">
+      <div className="relative overflow-hidden rounded-xl card-hover transition-all duration-500 hover:-translate-y-2 aspect-3/3 shadow-professional border border-border/50 group">
         {/* Background Image */}
         <Image
           src={imageSrc}
@@ -35,14 +35,14 @@ const ServiceCard = ({ icon: Icon, title, des, imageSrc, url, priority }) => {
         />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-accent-foreground/50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-accent-foreground/60 via-accent-foreground/50 to-accent-foreground/40 group-hover:from-accent-foreground/50 group-hover:via-accent-foreground/40 group-hover:to-accent-foreground/30 transition-all duration-500" />
 
         {/* Content */}
         <div className="relative z-10 p-6 pt-16 pb-8 h-full flex flex-col">
           {/* Icon */}
           <div className="mb-auto">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-primary/10 backdrop-blur-sm">
-              <Icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/20 backdrop-blur-md border border-primary/30 shadow-lg group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300">
+              <Icon className="w-8 h-8 text-primary drop-shadow-lg" strokeWidth={1.5} />
             </div>
           </div>
 
@@ -78,8 +78,8 @@ const ServiceCard = ({ icon: Icon, title, des, imageSrc, url, priority }) => {
         </div>
 
         {/* Corner Accent */}
-        <div className="absolute top-0 left-0 w-16 h-16 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full bg-primary/20 transform -rotate-45 translate-x-[-50%] translate-y-[-50%]" />
+        <div className="absolute top-0 right-0 w-24 h-24 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div className="absolute top-0 right-0 w-full h-full bg-primary/20 transform rotate-45 translate-x-[50%] translate-y-[-50%] rounded-full blur-xl" />
         </div>
       </div>
     </Link>
@@ -160,7 +160,7 @@ const Services = () => {
       icon: Truck,
       title: 'Logistics and Warehousing',
       des: 'Efficient Logistics and Warehousing for telecom equipment and materials, ensuring timely delivery and secure storage for projects.',
-      url: '/services/construction',
+      url: '/services/logistics',
       imageSrc: '/images/Warehousing.jpg',
     },
   ];
@@ -173,11 +173,11 @@ const Services = () => {
         {/* Header (match Products style) */}
         <div className="text-center mb-16 md:mb-20">
           <div className="inline-flex items-center justify-center gap-3 mb-6">
-            <div className="w-12 h-0.5 bg-linear-to-r from-transparent to-primary" />
+            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-primary" />
             <span className="text-sm font-semibold text-primary tracking-widest uppercase">
               We Offer
             </span>
-            <div className="w-12 h-0.5 bg-linear-to-l from-transparent to-primary" />
+            <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-primary" />
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-6">
@@ -208,7 +208,7 @@ const Services = () => {
         <div className="mt-14 text-center">
           <button
             onClick={() => setShowAll((v) => !v)}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary font-medium rounded-full transition-all duration-300 hover:gap-3 hover:shadow-lg hover:shadow-primary/10 group"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary/10 hover:bg-primary/20 text-primary font-semibold rounded-full transition-all duration-300 hover:gap-3 hover:shadow-professional hover:shadow-primary/20 group border border-primary/20 hover:border-primary/40"
           >
             {showAll ? (
               <>
