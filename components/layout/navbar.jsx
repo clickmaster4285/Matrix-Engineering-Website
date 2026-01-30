@@ -269,7 +269,7 @@ export function Navbar() {
               />
 
               <MobileLink label="CONTACT US" path="/contact" isActive={isActive} onClick={handleMobileLinkClick} />
-              <MobileLink label="LOGIN" path="/login" isActive={isActive} onClick={handleMobileLinkClick} />
+            
             </motion.div>
           )}
         </AnimatePresence>
