@@ -96,6 +96,7 @@ export default function Cabinets() {
             src="/images/cabinets-telecom.jpg"
             alt="Cabinets Hero"
             fill
+            loading="lazy"
             className="object-cover  object-[50%_25%]"
             priority
           />
@@ -138,6 +139,7 @@ export default function Cabinets() {
                     src="https://i0.wp.com/highrise.com.pk/wp-content/uploads/2022/09/Bending-machine-2.jpg?fit=1440%2C1080&ssl=1"
                     alt="Cabinet Image"
                     fill
+                    loading="lazy"
                     className="object-cover object-bottom"
                   />
                 </div>

@@ -209,17 +209,34 @@ const Hero = () => {
       <div className="absolute inset-0 z-10 pointer-events-none">
         <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-start pointer-events-auto">
           <div className="max-w-lg md:max-w-xl lg:max-w-2xl text-left">
-            <div className="inline-block mb-4 px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
-              <span className="text-sm font-semibold text-primary tracking-wider uppercase">Trusted Telecom Solutions</span>
+            <div className="hidden sm:inline-block mb-4 px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
+              <span className="text-sm font-semibold text-primary tracking-wider uppercase">
+                Trusted Telecom Solutions
+              </span>
             </div>
-            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
+
+            <h1 className="
+  -mt-14 sm:mt-0
+  text-base sm:text-3xl md:text-4xl lg:text-5xl
+  font-bold text-white
+  mb-3 sm:mb-4 md:mb-6
+  leading-snug sm:leading-tight
+  drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]
+">
+
               Your One Stop Shop to Plan, Build, Design and Manage your{' '}
-              <span className="text-primary drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">Telecom Infrastructure</span> with our end to end
-              solutions
+              <span className="text-primary drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">
+                Telecom Infrastructure
+              </span>{' '}
+              with our end to end solutions
             </h1>
-            <p className="text-base sm:text-lg text-white/90 max-w-xl leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
+
+
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 max-w-xl leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)] mx-12 ">
               Delivering excellence in telecom infrastructure with 20+ years of industry expertise
             </p>
+
+
           </div>
         </div>
 
@@ -267,7 +284,7 @@ const Hero = () => {
 
             {/* Mobile */}
             <div className="sm:hidden">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-x-4 ">
                 {stats.map((stat, i) => (
                   <div key={i} className="relative flex items-center gap-2 px-2 py-1.5">
                     <div className="absolute inset-0 bg-primary/10 blur-md opacity-70" />
