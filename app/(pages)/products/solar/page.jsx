@@ -10,7 +10,7 @@ export default function page() {
           {/* Hero Banner */}
           <section className="relative w-full h-[250px] md:h-[450px] overflow-hidden">
             <Image
-              src="/images/solar.jpg"
+              src="/images/solar.webp"
               alt="Telecom Equipment Installation"
               fill
               className="object-cover object-center"

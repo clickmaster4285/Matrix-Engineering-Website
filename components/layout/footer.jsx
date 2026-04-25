@@ -71,7 +71,7 @@ export function Footer() {
                 <span className="text-xl font-bold text-primary block leading-tight">
                   MATRIX ENGINEERING SERVICES
                 </span>
-                <div className="text-xs text-background/70 -mt-0.5">PRIVATE LIMITED</div>
+              
               </div>
             </div>
 
@@ -101,8 +101,7 @@ export function Footer() {
 
         <div className="border-t border-primary/20 mt-12 pt-8 text-center">
           <p className="text-sm text-background/70">
-            &copy; {new Date().getFullYear()} MATRIX ENGINEERING Private
-            Limited. All rights reserved.
+            &copy; {new Date().getFullYear()} MATRIX ENGINEERING SERVICES. All rights reserved.
           </p>
         </div>
       </div>

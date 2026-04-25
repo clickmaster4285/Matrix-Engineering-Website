@@ -17,7 +17,7 @@ const GalvanizedTelecom = () => {
         {/* Hero Banner (full-width, responsive height) */}
         <section className="relative w-full h-[250px] md:h-[450px] overflow-hidden">
           <Image
-            src="/images/galvanized .jpg"
+            src="/images/galvanized.webp"
             alt="Telecom Equipment Installation"
             fill
             className="object-cover object-[50%_15%]"

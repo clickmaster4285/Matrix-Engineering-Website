@@ -6,9 +6,9 @@ const CellOnWheelTowers = () => {
     <div className="min-h-screen">
       <main>
         {/* Hero Banner */}
-        <section className="relative w-full h-[250px] md:h-[450px] overflow-hidden">
+        <section className="relative w-full h-[60vh] md:h-[75vh] overflow-hidden">
           <Image
-            src="/images/cow-header.jpg"
+            src="/images/cell-on-tower-hero.png"
             alt="Telecom Equipment Installation"
             fill
             className="object-cover object-center"

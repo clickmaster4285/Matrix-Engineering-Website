@@ -86,8 +86,8 @@ const Contact = () => {
           className="relative w-full h-full"
         >
           <Image
-            src="/images/cow-img.jpg"
-            alt="Contact Matrix Engineering"
+            src="/images/cow-img.webp"
+            alt="Contact Matrix Engineering Services"
             fill
             className="object-cover  object-[50%_55%]"
             priority

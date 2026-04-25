@@ -52,7 +52,7 @@ const sectionVariants = {
           {/* Hero Banner */}
           <section className="relative w-full h-[250px] md:h-[450px] overflow-hidden">
             <Image
-              src="/images/construction-image.jpg"
+              src="/images/construction-image.webp"
               alt="Telecom Equipment Installation"
               fill
               className="object-cover object-[50%_15%]"
@@ -83,7 +83,7 @@ const sectionVariants = {
                       projects, from Dams to Highways and Buildings, we are
                       prepared for any task. Our team is accustomed to working
                       in diverse conditions and meeting demanding deadlines,
-                      allowing Matrix Engineering to be a reliable partner in
+                      allowing Matrix Engineering Services to be a reliable partner in
                       the field of large-scale Infrastructure Construction
                       Services in Pakistan.
                     </p>

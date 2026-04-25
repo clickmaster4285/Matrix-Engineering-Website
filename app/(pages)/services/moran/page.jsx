@@ -35,7 +35,7 @@ const Moran = () => {
           {/* Hero Banner */}
           <section className="relative h-[250px] md:h-[400px] overflow-hidden">
             <Image
-              src="/images/home-image-1.jpg"
+              src="/images/home-image-1.webp"
               alt="MORAN Network Deployment"
               fill
               className="object-cover object-[50%_60%]"
@@ -72,7 +72,7 @@ const Moran = () => {
                   <div className="flex justify-center">
                     <div className="relative w-full max-w-md h-72 overflow-hidden shadow-lg">
                       <Image
-                        src="/images/connection.jpg"
+                        src="/images/connection.webp"
                         alt="MORAN Site Integration"
                         fill
                         className="object-cover object-center"
