@@ -33,12 +33,12 @@ const COW = () => {
       <div className="min-h-screen">
         <main>
           {/* Hero Banner */}
-          <section className="relative h-[250px] md:h-[400px] overflow-hidden">
+          <section className="relative h-[60vh] md:h-[75vh] overflow-hidden">
             <Image
-              src="/images/cow-header.jpg"
+              src="/images/cell-on-tower-hero.png"
               alt="Cell on Wheels (CoW) Deployment"
               fill
-              className="object-cover object-[50%_5%]"
+              className="object-cover object-[50%_80%]"
               priority
             />
             <div className="absolute inset-0 flex items-center justify-center"></div>
@@ -70,10 +70,10 @@ const COW = () => {
                   <div className="flex justify-center">
                     <div className="relative w-full max-w-md h-72 overflow-hidden shadow-lg">
                       <Image
-                        src="/images/cow-img.jpg"
+                        src="/images/cell-tower.jpg"
                         alt="Temporary Telecom Site Setup (CoW)"
                         fill
-                        className="object-cover object-[50%_35%]"
+                        className="object-cover object-[50%_70%]"
                         priority
                       />
                     </div>

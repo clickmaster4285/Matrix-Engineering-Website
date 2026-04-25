@@ -35,12 +35,12 @@ const sectionVariants = {
       <div className="min-h-screen">
         <main>
           {/* Hero Banner */}
-          <section className="relative h-[250px] md:h-[450px] overflow-hidden">
+          <section className="relative h-[60vh] md:h-[75vh] overflow-hidden">
             <Image
-              src="/images/telecom-civil.jpg"
+              src="/images/telecom-civil.webp"
               alt="Telecom Civil Infrastructure Buildout"
               fill
-              className="object-cover object-[50%_65%]"
+              className="object-cover object-top"
               priority
             />
           </section>
@@ -81,7 +81,7 @@ const sectionVariants = {
                   <div className="flex justify-center">
                     <div className="relative w-full max-w-md h-72 overflow-hidden shadow-lg">
                       <Image
-                        src="/images/infrastructure.png"
+                        src="/images/telecom-infrastructure.webp"
                         alt="Telecom Tower Installation"
                         fill
                         className="object-cover object-center"

@@ -36,7 +36,7 @@ const sectionVariants = {
           {/* Hero Banner */}
           <section className="relative h-[250px] md:h-[400px] overflow-hidden">
             <Image
-              src="/images/home-image-8.jpg"
+              src="/images/home-image-8.webp"
               alt="Telecom Equipment Installation"
               fill
               className="object-cover object-[50%_45%]"

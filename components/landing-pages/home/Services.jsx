@@ -112,7 +112,7 @@ const Services = () => {
       title: 'Towers Construction & Maintenance',
       des: 'Professional tower construction, installation, and maintenance services ensuring structural integrity and optimal performance.',
       url: '/services/towers',
-      imageSrc: '/images/home-image-8.jpg',
+      imageSrc: '/images/home-image-8.webp',
     },
     {
       icon: Satellite,
@@ -126,7 +126,7 @@ const Services = () => {
       title: 'MORAN Services',
       des: 'Multi-Operator Radio Access Network solutions enabling infrastructure sharing for multiple telecom operators.',
       url: '/services/moran',
-      imageSrc: '/images/moran-img.jpg',
+      imageSrc: '/images/moran-img.webp',
     },
     {
       icon: UsersIcon,
@@ -140,14 +140,14 @@ const Services = () => {
       title: 'Cell on Wheels (COW)',
       des: 'Rapid deployment of temporary mobile network coverage solutions for events, emergencies, and temporary capacity needs.',
       url: '/services/cow',
-      imageSrc: '/images/cow.jpg',
+      imageSrc: '/images/cell-tower.jpg',
     },
     {
       icon: Gauge,
       title: 'RF Planning and Optimization',
       des: 'Precise RF Planning and Optimization Services to fine-tune network signals, leading to improved Network Performance.',
       url: '/services/rf-planning',
-      imageSrc: '/images/home-image-3.png',
+      imageSrc: '/images/home-image-3.webp',
     },
     {
       icon: Building2,

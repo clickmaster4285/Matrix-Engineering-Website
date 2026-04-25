@@ -15,7 +15,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function Navbar() {
- 
+
   const glowBtn =
     'text-white hover:text-white bg-transparent hover:bg-white/10 ' +
     'drop-shadow-[0_0_10px_rgba(59,130,246,0.75)] ' +
@@ -137,14 +137,9 @@ export function Navbar() {
               />
               <div className="ml-2 leading-tight">
                 <span className="text-md sm:text-2xl font-bold text-primary block">
-                  MATRIX SERVICES
+                  Matrix Engineering Services
                 </span>
-                <div
-                  className={`text-[10px] sm:text-sm -mt-1 font-medium ${transparent ? 'text-white/90' : 'text-foreground'
-                    }`}
-                >
-                  PVT LIMITED
-                </div>
+              
               </div>
             </Link>
           </motion.div>
@@ -269,7 +264,7 @@ export function Navbar() {
               />
 
               <MobileLink label="CONTACT US" path="/contact" isActive={isActive} onClick={handleMobileLinkClick} />
-            
+
             </motion.div>
           )}
         </AnimatePresence>

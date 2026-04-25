@@ -26,7 +26,7 @@ const Logistics = () => {
           {/* Hero Banner */}
           <section className="relative h-[250px] md:h-[450px] overflow-hidden">
             <Image
-              src="/images/warehouse-image.jpg"
+              src="/images/warehouse-image.webp"
               alt="Telecom Equipment Installation"
               fill
               className="object-cover object-[50%_85%]"

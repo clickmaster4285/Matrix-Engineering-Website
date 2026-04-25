@@ -94,7 +94,7 @@ const products = [
     url: '/products/generators',
     description:
       'Robust diesel generator power systems ensuring reliable site operation and continuous uptime.',
-    imageSrc: '/images/diesel-generator.jpg',
+    imageSrc: '/images/diesel-generator.webp',
   },
   {
     icon: Factory,

@@ -2,12 +2,11 @@
 
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
-import 'swiper/css/navigation';
 
-import { Rocket, CheckSquare, Hammer, Users, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Rocket, CheckSquare, Hammer, Users } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 /* ---------------- Counter (replays when triggerKey changes) ---------------- */
@@ -69,15 +68,15 @@ function useStableInView(ref, { threshold = 0.6 } = {}) {
 
 const Hero = () => {
   const slides = [
-   
-    { src: '/images/hero-section/1.jpg', alt: 'Telecom Infrastructure' },
-    { src: '/images/hero-section/2.jpg', alt: 'Telecom Infrastructure 2' },
-    { src: '/images/hero-section/3.jpg', alt: 'Telecom Infrastructure 3' },
-    { src: '/images/hero-section/4.jpg', alt: 'Telecom Infrastructure 4' },
-    { src: '/images/hero-section/5.jpg', alt: 'Telecom Infrastructure 5' },
-    { src: '/images/hero-section/6.jpg', alt: 'Telecom Infrastructure 6' },
-    { src: '/images/hero-section/7.jpg', alt: 'Telecom Infrastructure 7' },
-    { src: '/images/hero-section/8.jpg', alt: 'Telecom Infrastructure 8' },
+
+    { src: '/images/hero-section/1.webp', alt: 'Telecom Infrastructure' },
+    { src: '/images/hero-section/2.webp', alt: 'Telecom Infrastructure 2' },
+    { src: '/images/hero-section/3.webp', alt: 'Telecom Infrastructure 3' },
+    { src: '/images/hero-section/4.webp', alt: 'Telecom Infrastructure 4' },
+    { src: '/images/hero-section/5.webp', alt: 'Telecom Infrastructure 5' },
+    { src: '/images/hero-section/6.webp', alt: 'Telecom Infrastructure 6' },
+    { src: '/images/hero-section/7.webp', alt: 'Telecom Infrastructure 7' },
+    { src: '/images/hero-section/8.webp', alt: 'Telecom Infrastructure 8' },
   ];
 
   const stats = [
@@ -101,35 +100,22 @@ const Hero = () => {
     if (!statsInView) armedRef.current = true;
   }, [statsInView]);
 
-  // ✅ custom navigation refs (no global css needed)
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-
   return (
     <section className="relative">
+      {/* Carousel - pure swipe, no buttons */}
       <Swiper
-        modules={[Autoplay, Navigation]}
+        modules={[Autoplay]}
         loop
         autoplay={{ delay: 2500, disableOnInteraction: false }}
-        speed={90}
+        speed={800}
         touchRatio={1.5}
-        longSwipesRatio={0.15}
-        longSwipesMs={250}
-        // 👇 use custom elements
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-        onBeforeInit={(swiper) => {
-          // 👇 attach refs before init
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-        }}
+        grabCursor={true}
         className="heroSwiper"
       >
         {slides.map((s, idx) => (
           <SwiperSlide key={idx}>
-            <div className="relative h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px] xl:h-[700px]">
+            {/* Increased mobile height from 350px to 450px */}
+            <div className="relative h-[450px] sm:h-[450px] md:h-[550px] lg:h-[650px] xl:h-[700px]">
               <Image
                 src={s.src}
                 alt={s.alt}
@@ -143,67 +129,6 @@ const Hero = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-
-     
-      {/* ✅ Custom arrows – transparent on mobile */}
-      <div className="pointer-events-none absolute inset-0 z-20">
-        <button
-          ref={prevRef}
-          aria-label="Previous slide"
-          className="
-      pointer-events-auto
-      absolute left-3 top-1/2 -translate-y-1/2
-
-      w-11 h-11
-      sm:w-11 sm:h-11
-
-      rounded-full
-      flex items-center justify-center
-
-      text-white
-
-      bg-transparent
-      sm:bg-black/35 sm:backdrop-blur-md sm:border sm:border-white/10
-
-      shadow-none sm:shadow-lg
-      active:scale-95
-      transition
-      hover:bg-primary/30
-    "
-        >
-          <ChevronLeft className="w-6 h-6 drop-shadow-[0_0_6px_rgba(0,0,0,0.6)]" />
-        </button>
-
-        <button
-          ref={nextRef}
-          aria-label="Next slide"
-          className="
-      pointer-events-auto
-      absolute right-3 top-1/2 -translate-y-1/2
-
-      w-11 h-11
-      sm:w-11 sm:h-11
-
-      rounded-full
-      flex items-center justify-center
-
-      text-white
-
-      bg-transparent
-      sm:bg-black/35 sm:backdrop-blur-md sm:border sm:border-white/10
-
-      shadow-none sm:shadow-lg
-      active:scale-95
-      transition
-      hover:bg-primary/30
-    "
-        >
-          <ChevronRight className="w-6 h-6 drop-shadow-[0_0_6px_rgba(0,0,0,0.6)]" />
-        </button>
-      </div>
-
-
 
       {/* Overlay content (same as your working version) */}
       <div className="absolute inset-0 z-10 pointer-events-none">
@@ -223,7 +148,6 @@ const Hero = () => {
   leading-snug sm:leading-tight
   drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]
 ">
-
               Your One Stop Shop to Plan, Build, Design and Manage your{' '}
               <span className="text-primary drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">
                 Telecom Infrastructure
@@ -231,12 +155,9 @@ const Hero = () => {
               with our end to end solutions
             </h1>
 
-
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 max-w-xl leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)] mx-12 ">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 max-w-xl leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
               Delivering excellence in telecom infrastructure with 20+ years of industry expertise
             </p>
-
-
           </div>
         </div>
 
@@ -246,7 +167,7 @@ const Hero = () => {
             {/* Desktop */}
             <div className="hidden md:flex justify-center items-center gap-6 lg:gap-8 xl:gap-12">
               {stats.map((stat, i) => (
-                  <div
+                <div
                   key={i}
                   className="relative flex items-center gap-4 px-5 py-4 rounded-xl transition-all duration-500 hover:scale-[1.05] bg-white/5 backdrop-blur-md border border-white/10 hover:border-primary/30 hover:bg-white/10"
                 >
@@ -284,7 +205,7 @@ const Hero = () => {
 
             {/* Mobile */}
             <div className="sm:hidden">
-              <div className="grid grid-cols-2 gap-x-4 ">
+              <div className="grid grid-cols-2 gap-x-4">
                 {stats.map((stat, i) => (
                   <div key={i} className="relative flex items-center gap-2 px-2 py-1.5">
                     <div className="absolute inset-0 bg-primary/10 blur-md opacity-70" />
@@ -302,6 +223,16 @@ const Hero = () => {
           </div>
         </div>
         {/* ================= End Stats ================= */}
+      </div>
+
+      {/* Simple pagination dots indicator (no buttons) */}
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5 sm:hidden">
+        {slides.map((_, idx) => (
+          <div
+            key={idx}
+            className="w-1.5 h-1.5 rounded-full bg-white/50"
+          />
+        ))}
       </div>
     </section>
   );

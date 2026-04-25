@@ -93,10 +93,10 @@ export default function Cabinets() {
         {/* Hero Section */}
         <section className="relative w-full h-[450px] overflow-hidden">
           <Image
-            src="/images/cabinets-telecom.jpg"
+            src="/images/cabinets-telecom.webp"
             alt="Cabinets Hero"
             fill
-            loading="lazy"
+           
             className="object-cover  object-[50%_25%]"
             priority
           />

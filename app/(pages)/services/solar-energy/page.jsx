@@ -48,7 +48,7 @@ const sectionVariants = {
           <section className="relative min-h-[70vh] flex items-center px-4 overflow-hidden">
             {/* Background Image */}
             <Image
-              src="/images/solar-energy.jpg" // 👈 change path if needed
+              src="/images/solar-energy.webp" // 👈 change path if needed
               alt="Solar Energy Solutions"
               fill
               priority

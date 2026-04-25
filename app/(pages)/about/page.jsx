@@ -54,7 +54,7 @@ export default function AboutPage() {
       <section className="relative min-h-[70vh] flex items-center px-4 overflow-hidden">
         {/* Background Image */}
         <Image
-          src="/images/about-us.jpg" // 👈 put your image here
+          src="/images/about-us.webp" // 👈 put your image here
           alt="Matrix Engineering Services"
           fill
           priority
@@ -231,13 +231,13 @@ export default function AboutPage() {
               Building a linked world is about more than just setting up poles and wires. The mobile network market is moving at a fast speed. We stay ready to pivot and find new ways to help our clients keep up.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At <strong>Matrix Engineering</strong>, we use this chance to show our value, working hard to give our partners the high-quality results they need. We aim to stay as a top-tier provider that hears what customers want and cares about the places where we work. We take pride in our roots, our crew, and our way of doing business, which matches our company plan based on shared ideals. These ideals stay true regardless of where we are or who we are working with. These values are Trust, Persistence, and Working Together.
+              At <strong>Matrix Engineering Services</strong>, we use this chance to show our value, working hard to give our partners the high-quality results they need. We aim to stay as a top-tier provider that hears what customers want and cares about the places where we work. We take pride in our roots, our crew, and our way of doing business, which matches our company plan based on shared ideals. These ideals stay true regardless of where we are or who we are working with. These values are Trust, Persistence, and Working Together.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              <strong>Matrix Engineering</strong> has done a lot of work over the years to help with all kinds of network tasks; <strong>Civil Works</strong>, <strong>Telecom Equipment Installation</strong>, and <strong>Tower Fabrication</strong>, which are the main things we do well.
+              <strong>Matrix Engineering Services</strong> has done a lot of work over the years to help with all kinds of network tasks; <strong>Civil Works</strong>, <strong>Telecom Equipment Installation</strong>, and <strong>Tower Fabrication</strong>, which are the main things we do well.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We know that life is not always clear, and we will face tough tasks that do not have easy fixes. In these hard times, our company rules and our way of acting help us stay on the right path as a team. Following these rules is a job for every person who works at  <strong>Matrix Engineering</strong>. By doing this, we help our market, our towns, and build a group we are proud to be part of, where doing the right thing is a key way we stand out.
+              We know that life is not always clear, and we will face tough tasks that do not have easy fixes. In these hard times, our company rules and our way of acting help us stay on the right path as a team. Following these rules is a job for every person who works at  <strong>Matrix Engineering Services</strong>. By doing this, we help our market, our towns, and build a group we are proud to be part of, where doing the right thing is a key way we stand out.
             </p>
 
             <div className="pt-6 border-t border-border">
@@ -245,7 +245,7 @@ export default function AboutPage() {
                 Kamal Mumtaz,
                 <br />
                 <span className="text-primary">
-                  Matrix Engineering CEO
+                  Matrix Engineering Services CEO
                 </span>
               </p>
             </div>
