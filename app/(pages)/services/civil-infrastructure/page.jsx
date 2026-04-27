@@ -37,7 +37,7 @@ const sectionVariants = {
           {/* Hero Banner */}
           <section className="relative h-[60vh] md:h-[75vh] overflow-hidden">
             <Image
-              src="/images/telecom-civil.webp"
+              src="/images/telecom-civil.png"
               alt="Telecom Civil Infrastructure Buildout"
               fill
               className="object-cover object-top"
